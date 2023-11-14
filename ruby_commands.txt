@@ -1,0 +1,6 @@
+rails g model Person name:string personType:integer cpfCnpj:string:uniq cellphone:string 
+rails g model User name:string email:string:uniq password:string people:references
+rails g model Establishment street:text neighborhood:text number:integer people:references
+
+
+rails g controller homepage

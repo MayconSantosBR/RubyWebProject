@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  street: MyText
+  neighborhood: MyText
+  number: 1
+  people: one
+
+two:
+  street: MyText
+  neighborhood: MyText
+  number: 1
+  people: two

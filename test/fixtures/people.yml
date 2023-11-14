@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  personType: 1
+  cpfCnpj: MyText
+  cellphone: MyText
+
+two:
+  name: MyText
+  personType: 1
+  cpfCnpj: MyText
+  cellphone: MyText
