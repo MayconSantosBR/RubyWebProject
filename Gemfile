@@ -38,6 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Front-end
 gem 'bootstrap', '~> 4.0.0'
+gem "font-awesome-sass", "~> 6.5.1"
 gem 'jquery-rails'
 
 group :development, :test do

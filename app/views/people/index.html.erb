@@ -15,7 +15,7 @@
   <%= raw @header %>
 
   <div class="container pt-3">
-    <%= form_with model: @form, url: 'http://localhost:3000' + '/create', method: :post do |form| %>
+    <%= form_with model: @form, url: @is_update == 0 ? create_path : person_update_path(@person.id) , method: :post do |form| %>
     <div class="form-group">
       <%= form.label :Nome %>
       <%= form.text_field :name, class: 'form-control' %>

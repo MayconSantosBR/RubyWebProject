@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :people
-  post '/create', to: 'people#create'
+  resources :people do
+    collection do
+      get 'list', to: 'people#get'
+    end
+
+    post 'people/delete', to: 'people#destroy', as: 'delete'
+    post 'people/update', to: 'people#update', as: 'update'    
+  end
+
+  post '/create', to: 'people#create', as: 'create'
 
   resources :users
   resources :establishments

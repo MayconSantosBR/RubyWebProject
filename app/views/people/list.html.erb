@@ -1,0 +1,56 @@
+<!-- app/views/homepage/list.html.erb -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Página inicial</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <%= yield %>
+
+  <%= raw @header %>
+
+  <div class="container pt-2">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Tipo de pessoa</th>
+                <th scope="col">Identificador</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @count = 0 %>
+            <% @people.each do |person| %>
+                <% @count += 1 %>
+
+                <tr>
+                    <th scope="row"><%= @count %></th>
+                    <td><%= person.id %></td>
+                    <td><%= person.name %></td>
+                    <td><%= person.personType == 0 ? 'Física' : 'Jurídica' %></td>
+                    <td><%= person.cpfCnpj %></td>
+                    <td><%= person.cellphone %></td>
+                    <td>
+                        <%= link_to 'Editar', edit_person_path(person.id), class: 'btn btn-primary' %>
+                        <%= button_to 'Excluir', person_delete_path(person.id), method: :post, class: 'btn btn-danger' %>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

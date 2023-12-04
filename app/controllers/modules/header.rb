@@ -10,12 +10,20 @@ module HeaderGenerator
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <div class="nav-item dropdown show">
-                    <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="registers">Cadastros</a>
-        
-                    <div class="dropdown-menu" aria-labelledby="registers">
-                        <a class="dropdown-item" onclick="goTo('people/index.html')">Pessoas</a>
-                        <a class="dropdown-item">Estabelecimentos</a>
+                        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="registers">Cadastros</a>
+            
+                        <div class="dropdown-menu" aria-labelledby="registers">
+                            <a class="dropdown-item" onclick="goTo('people/index.html')">Pessoas</a>
+                            <a class="dropdown-item">Estabelecimentos</a>
+                        </div>
                     </div>
+                    <div class="nav-item dropdown show">
+                        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="lists">Registros</a>
+            
+                        <div class="dropdown-menu" aria-labelledby="lists">
+                            <a class="dropdown-item" onclick="goTo('people/list.html')">Pessoas</a>
+                            <a class="dropdown-item">Estabelecimentos</a>
+                        </div>
                     </div>
                 </ul>
             </div>
