@@ -1,0 +1,54 @@
+<!-- app/views/homepage/index.html.erb -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Página inicial</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <%= yield %>
+
+  <%= raw @header %>
+
+  <div class="container pt-3">
+    <%= form_with model: @form, url: 'http://localhost:3000' + '/create', method: :post do |form| %>
+    <div class="form-group">
+      <%= form.label :Nome %>
+      <%= form.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :'Tipo de pessoa:' %>
+      <%= form.select :personType, ['Física', 'Jurídica'], class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :CPF %>
+      <%= form.text_field :cpf, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :CNPJ %>
+      <%= form.text_field :cnpj, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :Telefone %>
+      <%= form.text_field :cellphone, class: 'form-control' %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Criar', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

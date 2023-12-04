@@ -1,13 +1,21 @@
-<!-- app/views/index.html.erb -->
+<!-- app/views/homepage/index.html.erb -->
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <title>Your Application Title</title>
-  <!-- Add your stylesheet link tags or other head elements here -->
+  <title>Página inicial</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <%= yield %>
-  <!-- Add your JavaScript script tags or other body elements here -->
+
+  <%= raw @header %>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
