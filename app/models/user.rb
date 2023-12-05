@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-  belongs_to :people
+    has_secure_password
 end
